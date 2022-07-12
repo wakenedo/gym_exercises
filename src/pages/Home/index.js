@@ -7,7 +7,7 @@ import SearchExercises from '../../components/SearchExercises'
 import Exercises from '../../components/Exercises'
 
 const Home = () => {
-    const [_exercises, _setExercises] = useState([])
+    const [exercises, setExercises] = useState([])
     const [bodyPart, setBodyPart] = useState('all')
 
 
@@ -15,13 +15,13 @@ const Home = () => {
         <Box>
             <HeroBanner />
             <SearchExercises 
-            setExercise={_setExercises}
+            setExercises={setExercises}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
             />
             <Exercises 
-            exercises={_exercises}
-            setExercise={_setExercises}
+            exercises={exercises}
+            setExercises={setExercises}
             bodyPart={bodyPart}
             />
         </Box>

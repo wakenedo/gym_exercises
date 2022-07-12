@@ -7,9 +7,8 @@ import { fetchData, exerciseOptions } from '../../utils/fetchData'
 //Components
 import HorizontalScrollbar from '../HorizontalScrollbar'
 
-const SearchExercises = ({ _setExercises, bodyPart, setBodyPart }) => {
+const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState('')
-  const [exercises, setExercises] = useState([])
   const [bodyParts, setBodyParts] = useState([])
 
   useEffect(() => {
@@ -31,12 +30,15 @@ const SearchExercises = ({ _setExercises, bodyPart, setBodyPart }) => {
         exerciseOptions
       );
       const searchedExercises = exercisesData.filter(
-        (exercises) =>
-          exercises.name.toLowerCase().includes(search)
-          || exercises.target.toLowerCase().includes(search)
-          || exercises.equipment.toLowerCase().includes(search)
-          || exercises.bodyPart.toLowerCase().includes(search)
+        (item) =>
+          item.name.toLowerCase().includes(search)
+          || item.target.toLowerCase().includes(search)
+          || item.equipment.toLowerCase().includes(search)
+          || item.bodyPart.toLowerCase().includes(search)
       )
+
+      window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
+
       setSearch('');
       setExercises(searchedExercises)
     }

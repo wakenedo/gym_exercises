@@ -28,7 +28,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         sx={{ gap: { lg: '110px', xs: '50px' } }}
       >
         {exercises.map((exercise, index) => (
-          <p>
+          <p
+          key={exercise.id}
+          >
             {exercise.name}
           </p>
         ))}
