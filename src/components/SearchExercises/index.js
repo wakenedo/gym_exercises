@@ -65,6 +65,9 @@ const SearchExercises = () => {
             position: {
               lg: 'absolute'
             }, 
+            right: {
+              lg: '0',            
+            },
             width:
             {
               lg: '175px',
@@ -73,7 +76,7 @@ const SearchExercises = () => {
             fontSize: {
               lg:'20px',
               xs: '14px'
-            }
+            },
           }}
           variant='contained'
           color='error'
