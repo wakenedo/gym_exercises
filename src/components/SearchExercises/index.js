@@ -7,7 +7,7 @@ import { fetchData, exerciseOptions } from '../../utils/fetchData'
 //Components
 import HorizontalScrollbar from '../HorizontalScrollbar'
 
-const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
+const SearchExercises = ({ _setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState('')
   const [exercises, setExercises] = useState([])
   const [bodyParts, setBodyParts] = useState([])
@@ -31,11 +31,11 @@ const SearchExercises = ({ setExercise, bodyPart, setBodyPart }) => {
         exerciseOptions
       );
       const searchedExercises = exercisesData.filter(
-        (exercise) =>
-          exercise.name.toLowerCase().includes(search)
-          || exercise.target.toLowerCase().includes(search)
-          || exercise.equipment.toLowerCase().includes(search)
-          || exercise.bodyPart.toLowerCase().includes(search)
+        (exercises) =>
+          exercises.name.toLowerCase().includes(search)
+          || exercises.target.toLowerCase().includes(search)
+          || exercises.equipment.toLowerCase().includes(search)
+          || exercises.bodyPart.toLowerCase().includes(search)
       )
       setSearch('');
       setExercises(searchedExercises)
