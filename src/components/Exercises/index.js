@@ -25,7 +25,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         direction='row'
         flexWrap='wrap'
         justifyContent='center'
-        sx={{ gap: { lg: '110px', xs: '50px' } }}
+        sx={{ 
+          gap: { 
+            lg: '110px', 
+            xs: '50px' 
+          } 
+          }}
       >
         {exercises.map((exercise, index) => (
           <p
