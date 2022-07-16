@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 
 //Utils
-import { exerciseOptions, fetchData } from '../../utils/fetchData'
+import { exerciseOptions, fetchData, youtubeOptions } from '../../utils/fetchData'
 
 //Components
 import Detail from '../../components/ExerciseDetail/Detail'
@@ -23,6 +23,8 @@ const ExerciseDetail = () => {
 
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions)
       setExerciseDetail(exerciseDetailData)
+
+      const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?q=${exerciseDetailData.name}`, youtubeOptions)
     }
 
     fetchExercisesData()
