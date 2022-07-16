@@ -70,7 +70,8 @@ const Detail = ({ exerciseDetail }) => {
                             borderRadius: '15%',
                         }}
                         >
-                            <img src={item.icon} 
+                            <img 
+                            src={item.icon} 
                             alt={bodyPart}
                             style={{
                                 width: '50px',
@@ -80,6 +81,7 @@ const Detail = ({ exerciseDetail }) => {
                         </Button>
                         <Typography
                         variant='h5'
+                        key={item.name}
                         textTransform='capitalize'
                         >
                             {item.name}
