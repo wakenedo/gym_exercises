@@ -49,6 +49,12 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                     rel='noreferrer'
                     >
                         <img src={item.video.thumbnails[0].url} alt={item.video.title}/>
+                        <Typography
+                        variant='h5'
+                        color='#FF2625'
+                        >
+                            {item.video.title}
+                        </Typography>
                     </a>
                 ))}
 
