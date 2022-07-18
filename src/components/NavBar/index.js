@@ -8,11 +8,29 @@ const NavBar = () => {
   return (
     <Stack
       direction='row'
-      justifyContent='space-around' sx={{ gap: { sm: '122px', xs: '40px' }, mt: {sm: '32px', xs: '20px'}, justifyContent: 'none'}}
+      justifyContent='space-around'
+      sx={{
+        justifyContent: 'none',
+        gap: {
+          sm: '122px',
+          xs: '40px'
+        },
+        mt: {
+          sm: '32px',
+          xs: '20px'
+        },
+      }}
       px='20px'
     >
       <Link to='/'>
-        <img src={Logo} alt='logo' style={{ width: '48px', height: '48px', margin: '0 20px' }} />
+        <img
+          src={Logo}
+          alt='logo'
+          style={{
+            width: '48px',
+            height: '48px',
+            margin: '0 20px'
+          }} />
       </Link>
       <Stack
         direction='row'
@@ -20,8 +38,25 @@ const NavBar = () => {
         fontSize='24px'
         alignItems='flex-end'
       >
-        <Link style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }} to='/'>Home</Link>
-        <a href='#exercises' style={{ textDecoration: 'none', color: '#3A1212' }}>Exercises</a>
+        <Link
+          to='/'
+          style={{
+            textDecoration: 'none',
+            color: '#3A1212',
+            //borderBottom: '3px solid #FF2625'
+          }}
+        >
+          Home
+        </Link>
+        <a
+          href='#exercises'
+          style={{
+            textDecoration: 'none',
+            color: '#3A1212'
+          }}
+        >
+          Exercises
+        </a>
       </Stack>
     </Stack>
   )
